@@ -3,14 +3,25 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Greenwashing Literacy is a public educational resource for reading sustainability claims, climate-delay framings and green communication more critically.">
+  <meta name="description" content="Greenwashing Literacy is a free educational resource for reading sustainability claims, climate-delay framings and green communication more critically.">
   <meta property="og:title" content="Greenwashing Literacy">
   <meta property="og:description" content="A practical way to read sustainability claims before they read you.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://greenwashingliteracy.com">
-  <title>Greenwashing Literacy</title>
+  <meta name="theme-color" content="#f6efdf">
+  <title>Greenwashing Literacy — read sustainability claims critically</title>
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22%3E%3Crect width=%2264%22 height=%2264%22 fill=%22%23fffaf0%22/%3E%3Crect x=%228%22 y=%228%22 width=%2248%22 height=%2248%22 fill=%22none%22 stroke=%22%234b245f%22 stroke-width=%224%22/%3E%3Ctext x=%2216%22 y=%2239%22 font-family=%22monospace%22 font-size=%2218%22 font-weight=%22700%22 fill=%22%234b245f%22%3EGL%3C/text%3E%3C/svg%3E">
-  <link rel="stylesheet" href="styles.css?v=2">
+  <link rel="stylesheet" href="styles.css?v=3">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Greenwashing Literacy",
+    "url": "https://greenwashingliteracy.com",
+    "description": "A free educational resource for reading sustainability claims, climate-delay framings and green communication more critically.",
+    "inLanguage": "en-GB"
+  }
+  </script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -21,130 +32,143 @@
       <span>Greenwashing Literacy</span>
     </a>
     <nav class="site-nav" aria-label="Primary navigation">
-      <a href="#greenwashing">Greenwashing</a>
-      <a href="#delay">Climate delay</a>
-      <a href="#tool">Four questions</a>
-      <a href="#claim-lab">Claim lab</a>
-      <a href="#educators">Educators</a>
-      <a href="#resources">Resources</a>
+      <a href="#greenwashing" data-nav="greenwashing">Greenwashing</a>
+      <a href="#delay" data-nav="delay">Climate delay</a>
+      <a href="#tool" data-nav="tool">Four questions</a>
+      <a href="#claim-lab" data-nav="claim-lab">Claim lab</a>
+      <a href="#glossary" data-nav="glossary">Glossary</a>
+      <a href="#educators" data-nav="educators">Educators</a>
+      <a href="#resources" data-nav="resources">Resources</a>
     </nav>
   </header>
 
   <main id="main">
+
+    <!-- ============ HERO ============ -->
     <section class="hero section-band" id="top" aria-labelledby="hero-title">
       <div class="hero-copy">
-        <h1 id="hero-title">Greenwashing Literacy</h1>
-        <p class="hero-subheading">A practical way to read sustainability claims before they read you.</p>
+        <p class="hero-kicker">A field guide to green claims</p>
+        <h1 id="hero-title">Read the claim before it reads you.</h1>
+        <p class="hero-subheading">Greenwashing Literacy is a free resource for slowing a sustainability claim down — checking what it says, what it shows, what it hides, and what future it quietly normalises.</p>
         <div class="hero-actions" aria-label="Main actions">
-          <a class="button button-primary" href="#claim-lab">Try the claim lab</a>
-          <a class="button button-secondary" href="#tool">Try the four questions</a>
+          <a class="button button-primary" href="#claim-lab">Open the claim lab</a>
+          <a class="button button-secondary" href="#tool">Learn the four questions</a>
         </div>
-        <ol class="question-rail" aria-label="The four-question reading route">
-          <li><span>01</span> What is claimed?</li>
-          <li><span>02</span> What evidence is offered?</li>
-          <li><span>03</span> What is omitted?</li>
-          <li><span>04</span> What future is normalised?</li>
-        </ol>
+        <p class="hero-footnote">No tracking, no sign-up, no jargon wall. Built from an MA dissertation project at the University of Manchester.</p>
       </div>
 
-      <figure class="evidence-desk" aria-labelledby="hero-visual-title" aria-describedby="hero-visual-desc">
-        <figcaption id="hero-visual-title">Annotated fictional sustainability claim</figcaption>
-        <p id="hero-visual-desc" class="sr-only">A fictional claim card is inspected with labels for claim, evidence, omission and future.</p>
-        <div class="desk-ruler" aria-hidden="true"></div>
+      <figure class="evidence-desk" aria-labelledby="hero-visual-title">
+        <figcaption id="hero-visual-title">Specimen 03 · fictional claim under inspection</figcaption>
         <div class="claim-specimen hero-specimen">
           <div class="specimen-topline">
             <span>Specimen claim 03</span>
             <span>Public communication</span>
           </div>
-          <blockquote>"100% planet kind cleaning, now in a lighter refill."</blockquote>
-          <p>New everyday refill pack. Made for a cleaner future.</p>
-          <div class="specimen-note">
-            Evidence supplied: selected packaging data. Boundary not stated.
-          </div>
-          <span class="lens" aria-hidden="true"></span>
+          <blockquote>&ldquo;<span class="spec-part" data-part="claim">100% planet kind</span> cleaning, now in a <span class="spec-part" data-part="evidence">lighter refill</span>.&rdquo;</blockquote>
+          <p>New everyday refill pack. <span class="spec-part" data-part="future">Made for a cleaner future.</span></p>
+          <div class="specimen-note"><span class="spec-part" data-part="omission">Evidence supplied: selected packaging data. Boundary not stated.</span></div>
+          <span class="specimen-stamp" aria-hidden="true">Under review</span>
         </div>
-        <ul class="annotation-list" aria-label="Annotation labels">
-          <li class="annotation annotation-claim"><span>Claim</span> broad promise</li>
-          <li class="annotation annotation-evidence"><span>Evidence</span> narrow data</li>
-          <li class="annotation annotation-omission"><span>Omission</span> product impact</li>
-          <li class="annotation annotation-future"><span>Future</span> normalised demand</li>
-        </ul>
+        <div class="annotation-tray" role="group" aria-label="Inspect the specimen with the four lenses">
+          <p class="tray-hint" id="tray-hint" aria-live="polite">Tap a lens to inspect the claim.</p>
+          <div class="annotation-chips">
+            <button type="button" class="chip chip-claim" data-lens="claim" aria-pressed="false"><span>01 Claim</span>broad promise</button>
+            <button type="button" class="chip chip-evidence" data-lens="evidence" aria-pressed="false"><span>02 Evidence</span>narrow data</button>
+            <button type="button" class="chip chip-omission" data-lens="omission" aria-pressed="false"><span>03 Omission</span>no boundary</button>
+            <button type="button" class="chip chip-future" data-lens="future" aria-pressed="false"><span>04 Future</span>normalised demand</button>
+          </div>
+        </div>
       </figure>
     </section>
 
+    <!-- ============ 01 DEFINITION ============ -->
     <section class="section-band" id="greenwashing" aria-labelledby="greenwashing-title">
       <div class="section-layout">
         <div class="section-kicker">01 / Definition</div>
         <div class="section-content">
-          <h2 id="greenwashing-title">What is greenwashing?</h2>
-          <div class="lead-grid">
-            <p>Greenwashing is misleading or overstated environmental communication. It can appear in advertising, packaging, institutional statements, reports, public relations, social media posts and campaign slogans.</p>
-            <p>Not every sustainability claim is false. The literacy task is to ask whether a claim is specific, evidenced, scoped and honest about limits.</p>
+          <h2 id="greenwashing-title" class="reveal">What is greenwashing?</h2>
+          <div class="lead-grid reveal">
+            <p>Greenwashing is misleading or overstated environmental communication. It can appear in advertising, packaging, institutional statements, annual reports, public relations, social media posts and campaign slogans.</p>
+            <p>Not every sustainability claim is false. The literacy task is to ask whether a claim is specific, evidenced, scoped and honest about its limits — and to notice when warmth is doing the work that evidence should do.</p>
           </div>
 
-          <div class="example-table" aria-label="Short examples of sustainability claims">
+          <div class="example-table reveal" aria-label="Short examples of sustainability claim types">
             <article>
               <p class="mono-label">Vague product claim</p>
-              <h3>"100% planet kind"</h3>
-              <p>A warm phrase may sound responsible without saying which impact has improved, compared with what, or by how much.</p>
+              <h3>&ldquo;100% planet kind&rdquo;</h3>
+              <p>A warm phrase can sound responsible without saying which impact has improved, compared with what, or by how much.</p>
             </article>
             <article>
               <p class="mono-label">Transition claim</p>
-              <h3>"Powering today, building tomorrow"</h3>
-              <p>A both-and statement may present expansion and transition as equally compatible without showing the pathway.</p>
+              <h3>&ldquo;Powering today, building tomorrow&rdquo;</h3>
+              <p>A both-and statement can present expansion and transition as equally compatible without showing the pathway between them.</p>
             </article>
             <article>
               <p class="mono-label">Energy-security claim</p>
-              <h3>"Keeping the lights on for decades to come"</h3>
-              <p>A security frame may turn long-term dependence into common sense while leaving alternatives unexamined.</p>
+              <h3>&ldquo;Keeping the lights on for decades&rdquo;</h3>
+              <p>A security frame can turn long-term dependence into common sense while leaving the alternatives unexamined.</p>
             </article>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- ============ 02 CLIMATE DELAY ============ -->
     <section class="section-band section-tinted" id="delay" aria-labelledby="delay-title">
       <div class="section-layout">
         <div class="section-kicker">02 / Change</div>
         <div class="section-content">
-          <h2 id="delay-title">Why greenwashing has changed</h2>
-          <p class="section-intro">Contemporary greenwashing is not only vague green packaging. It can also work through climate-delay framings: accepting that climate change matters while making slow or inadequate action feel reasonable.</p>
-          <p class="section-intro">Lamb et al. (2020) identify four broad delay families. In public-facing terms, they help us notice how a message can appear realistic while narrowing what counts as possible.</p>
+          <h2 id="delay-title" class="reveal">Why greenwashing has changed</h2>
+          <p class="section-intro reveal">Contemporary greenwashing is not only vague green packaging. Increasingly it works through <strong>climate-delay framings</strong>: accepting that climate change matters while making slow or inadequate action feel reasonable.</p>
+          <p class="section-intro reveal">Lamb et al. (2020) identify four broad delay families. They help us notice how a message can appear realistic while quietly narrowing what counts as possible.</p>
 
-          <div class="delay-board" aria-label="Four climate-delay families">
+          <div class="delay-board reveal" aria-label="Four climate-delay families">
             <article>
               <span class="matrix-number">1</span>
               <h3>Redirect responsibility</h3>
               <p>Move attention away from institutions, systems or producers and towards individual choices alone.</p>
+              <p class="delay-tell"><strong>Tell:</strong> &ldquo;It's in your hands.&rdquo;</p>
             </article>
             <article>
               <span class="matrix-number">2</span>
               <h3>Push non-transformative solutions</h3>
               <p>Promote improvements that sound decisive but do not alter the underlying high-emission model.</p>
+              <p class="delay-tell"><strong>Tell:</strong> &ldquo;Innovation will solve it.&rdquo;</p>
             </article>
             <article>
               <span class="matrix-number">3</span>
-              <h3>Emphasise the downsides of action</h3>
-              <p>Make climate action feel too costly, disruptive or unfair while giving less attention to the costs of delay.</p>
+              <h3>Emphasise the downsides</h3>
+              <p>Make climate action feel too costly, disruptive or unfair, while giving less attention to the costs of delay.</p>
+              <p class="delay-tell"><strong>Tell:</strong> &ldquo;Change puts jobs at risk.&rdquo;</p>
             </article>
             <article>
               <span class="matrix-number">4</span>
               <h3>Surrender</h3>
               <p>Suggest that meaningful change is impossible, too late, or unrealistic enough to excuse inaction.</p>
+              <p class="delay-tell"><strong>Tell:</strong> &ldquo;Nothing we do will matter.&rdquo;</p>
             </article>
+          </div>
+
+          <div class="quiz-shell reveal" id="delay-quiz" aria-labelledby="quiz-title">
+            <div class="quiz-head">
+              <h3 id="quiz-title">Spot the family</h3>
+              <p>Six fictional statements. Which delay family is each one closest to? <span class="quiz-score" data-quiz-score aria-live="polite"></span></p>
+            </div>
+            <div data-quiz-body></div>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- ============ 03 THE TOOL ============ -->
     <section class="section-band" id="tool" aria-labelledby="tool-title">
       <div class="section-layout">
         <div class="section-kicker">03 / Tool</div>
         <div class="section-content">
-          <h2 id="tool-title">The four-question tool</h2>
-          <p class="section-intro">The tool slows a claim down. It does not ask you to be suspicious of everything. It asks you to look at what the communication includes, what it leaves out, and what kind of future it makes feel normal.</p>
+          <h2 id="tool-title" class="reveal">The four-question tool</h2>
+          <p class="section-intro reveal">The tool slows a claim down. It does not ask you to be suspicious of everything — it asks you to look at what a communication includes, what it leaves out, and what kind of future it makes feel normal.</p>
 
-          <div class="tool-board">
+          <div class="tool-board reveal">
             <article class="tool-card">
               <div class="tool-index">01</div>
               <h3>What is claimed?</h3>
@@ -153,7 +177,7 @@
                 <dt>Look for</dt>
                 <dd>Scope, comparison, time frame, product versus company, absolute versus relative language.</dd>
                 <dt>Mini example</dt>
-                <dd>"Lower impact" only becomes readable when you know lower than what and across which impact.</dd>
+                <dd>&ldquo;Lower impact&rdquo; only becomes readable when you know lower than what, and across which impact.</dd>
                 <dt>Warning sign</dt>
                 <dd>The central words feel positive but cannot be measured or tested.</dd>
               </dl>
@@ -168,7 +192,7 @@
                 <dt>Mini example</dt>
                 <dd>A recycling claim is stronger when it states actual collection access and material recovery limits.</dd>
                 <dt>Warning sign</dt>
-                <dd>The evidence is a logo, nature image or broad value statement rather than substantiation.</dd>
+                <dd>The evidence is a logo, a nature image or a broad value statement rather than substantiation.</dd>
               </dl>
             </article>
             <article class="tool-card">
@@ -179,7 +203,7 @@
                 <dt>Look for</dt>
                 <dd>Lifecycle impacts, offsets, exclusions, trade-offs, supply chains, absolute emissions and rebound effects.</dd>
                 <dt>Mini example</dt>
-                <dd>A "plastic-free" pack may still rely on high-impact materials or hard-to-recycle coatings.</dd>
+                <dd>A &ldquo;plastic-free&rdquo; pack may still rely on high-impact materials or hard-to-recycle coatings.</dd>
                 <dt>Warning sign</dt>
                 <dd>The claim highlights one improvement while avoiding the main source of impact.</dd>
               </dl>
@@ -190,9 +214,9 @@
               <p>Notice the future the claim invites you to accept as sensible, inevitable or desirable.</p>
               <dl>
                 <dt>Look for</dt>
-                <dd>Promises of later action, permanent demand, technological rescue, consumer responsibility and "realistic" delay.</dd>
+                <dd>Promises of later action, permanent demand, technological rescue, consumer responsibility and &ldquo;realistic&rdquo; delay.</dd>
                 <dt>Mini example</dt>
-                <dd>"By 2050" may be meaningful, or it may move responsibility into a future without near-term milestones.</dd>
+                <dd>&ldquo;By 2050&rdquo; may be meaningful, or it may move responsibility into a future without near-term milestones.</dd>
                 <dt>Warning sign</dt>
                 <dd>The message makes continued high impact feel unavoidable while describing action as optional.</dd>
               </dl>
@@ -202,119 +226,36 @@
       </div>
     </section>
 
+    <!-- ============ 04 CLAIM LAB ============ -->
     <section class="section-band section-tinted" id="claim-lab" aria-labelledby="lab-title">
       <div class="section-layout">
         <div class="section-kicker">04 / Practice</div>
         <div class="section-content">
-          <h2 id="lab-title">Try it yourself</h2>
-          <p class="section-intro">Choose a fictional claim, then open the four lenses. The aim is not to guess a perfect answer. It is to make the claim more inspectable.</p>
+          <h2 id="lab-title" class="reveal">The claim lab</h2>
+          <p class="section-intro reveal">Choose a fictional claim, then work through the four lenses. For each lens, pick the observation you find strongest — then compare it with our reading. There is no perfect answer; the aim is to make the claim more inspectable.</p>
 
-          <div class="lab-shell">
-            <div class="lab-tabs" role="tablist" aria-label="Fictional claim cards">
-              <button type="button" class="lab-tab is-active" id="tab-product" role="tab" aria-selected="true" aria-controls="panel-product" data-case-tab="product">Card A<span>Product claim</span></button>
-              <button type="button" class="lab-tab" id="tab-transition" role="tab" aria-selected="false" aria-controls="panel-transition" data-case-tab="transition">Card B<span>Transition claim</span></button>
-              <button type="button" class="lab-tab" id="tab-security" role="tab" aria-selected="false" aria-controls="panel-security" data-case-tab="security">Card C<span>Energy security</span></button>
-            </div>
-
-            <article class="lab-panel is-active" id="panel-product" role="tabpanel" aria-labelledby="tab-product" data-case-panel="product">
-              <div class="lab-specimen">
-                <p class="mono-label">Card A / Product-level green claim</p>
-                <h3>EverKind Wash Tabs</h3>
-                <blockquote>"100% planet kind cleaning, now in a lighter refill."</blockquote>
-                <p>Small-pack convenience. Refill available online.</p>
-              </div>
-              <div class="lab-analysis">
-                <p class="lab-progress" aria-live="polite">0 of 4 lenses opened</p>
-                <button type="button" class="analysis-button" aria-expanded="false" aria-controls="product-claim" data-reveal="product-claim">Reveal what is claimed</button>
-                <div class="analysis-panel" id="product-claim" hidden>
-                  <p>The phrase suggests the whole product is environmentally benign, while "lighter refill" points to packaging weight only.</p>
-                </div>
-                <button type="button" class="analysis-button" aria-expanded="false" aria-controls="product-evidence" data-reveal="product-evidence">Reveal evidence problem</button>
-                <div class="analysis-panel" id="product-evidence" hidden>
-                  <p>No data is given for ingredients, transport, washing temperature, packaging recovery or comparison with the previous pack.</p>
-                </div>
-                <button type="button" class="analysis-button" aria-expanded="false" aria-controls="product-omission" data-reveal="product-omission">Reveal omission</button>
-                <div class="analysis-panel" id="product-omission" hidden>
-                  <p>The claim omits which impact category improved and whether the refill system is actually available to most buyers.</p>
-                </div>
-                <button type="button" class="analysis-button" aria-expanded="false" aria-controls="product-delay" data-reveal="product-delay">Reveal possible delay family</button>
-                <div class="analysis-panel" id="product-delay" hidden>
-                  <p>Possible family: push non-transformative solutions, if a narrow packaging improvement stands in for wider product impact.</p>
-                </div>
-              </div>
-            </article>
-
-            <article class="lab-panel" id="panel-transition" role="tabpanel" aria-labelledby="tab-transition" data-case-panel="transition" hidden>
-              <div class="lab-specimen">
-                <p class="mono-label">Card B / Both-and transition claim</p>
-                <h3>Northbridge Energy</h3>
-                <blockquote>"Powering today's needs while investing in tomorrow's clean technologies."</blockquote>
-                <p>Future portfolio language. No spending split shown.</p>
-              </div>
-              <div class="lab-analysis">
-                <p class="lab-progress" aria-live="polite">0 of 4 lenses opened</p>
-                <button type="button" class="analysis-button" aria-expanded="false" aria-controls="transition-claim" data-reveal="transition-claim">Reveal what is claimed</button>
-                <div class="analysis-panel" id="transition-claim" hidden>
-                  <p>The claim presents present supply and future clean investment as a balanced transition story.</p>
-                </div>
-                <button type="button" class="analysis-button" aria-expanded="false" aria-controls="transition-evidence" data-reveal="transition-evidence">Reveal evidence problem</button>
-                <div class="analysis-panel" id="transition-evidence" hidden>
-                  <p>The investment is unnamed. The claim does not show spending share, emissions trajectory, project dates or retirement plans.</p>
-                </div>
-                <button type="button" class="analysis-button" aria-expanded="false" aria-controls="transition-omission" data-reveal="transition-omission">Reveal omission</button>
-                <div class="analysis-panel" id="transition-omission" hidden>
-                  <p>It omits whether high-emission activity is expanding, stable or declining while clean technologies are described.</p>
-                </div>
-                <button type="button" class="analysis-button" aria-expanded="false" aria-controls="transition-delay" data-reveal="transition-delay">Reveal possible delay family</button>
-                <div class="analysis-panel" id="transition-delay" hidden>
-                  <p>Possible family: push non-transformative solutions, especially if future investment delays near-term reduction.</p>
-                </div>
-              </div>
-            </article>
-
-            <article class="lab-panel" id="panel-security" role="tabpanel" aria-labelledby="tab-security" data-case-panel="security" hidden>
-              <div class="lab-specimen">
-                <p class="mono-label">Card C / Energy-security claim</p>
-                <h3>HarbourGrid Supply</h3>
-                <blockquote>"Reliable domestic energy to keep the lights on for decades to come."</blockquote>
-                <p>Reliability frame. Alternatives not named.</p>
-              </div>
-              <div class="lab-analysis">
-                <p class="lab-progress" aria-live="polite">0 of 4 lenses opened</p>
-                <button type="button" class="analysis-button" aria-expanded="false" aria-controls="security-claim" data-reveal="security-claim">Reveal what is claimed</button>
-                <div class="analysis-panel" id="security-claim" hidden>
-                  <p>The claim connects long-term supply with safety, reliability and national reassurance.</p>
-                </div>
-                <button type="button" class="analysis-button" aria-expanded="false" aria-controls="security-evidence" data-reveal="security-evidence">Reveal evidence problem</button>
-                <div class="analysis-panel" id="security-evidence" hidden>
-                  <p>It gives no evidence about demand, alternatives, resilience, price risk or compatibility with climate targets.</p>
-                </div>
-                <button type="button" class="analysis-button" aria-expanded="false" aria-controls="security-omission" data-reveal="security-omission">Reveal omission</button>
-                <div class="analysis-panel" id="security-omission" hidden>
-                  <p>The phrase omits how energy security could also be served by efficiency, storage, grid upgrades and lower demand.</p>
-                </div>
-                <button type="button" class="analysis-button" aria-expanded="false" aria-controls="security-delay" data-reveal="security-delay">Reveal possible delay family</button>
-                <div class="analysis-panel" id="security-delay" hidden>
-                  <p>Possible family: emphasise the downsides of action, if change is framed mainly as a threat to reliability.</p>
-                </div>
-              </div>
-            </article>
+          <div class="lab-shell reveal" data-lab>
+            <div class="lab-tabs" role="tablist" aria-label="Fictional claim cards" data-lab-tabs></div>
+            <div data-lab-panels></div>
           </div>
+          <noscript><p class="noscript-note">The interactive lab needs JavaScript. The four-question tool above works on any claim without it.</p></noscript>
         </div>
       </div>
     </section>
 
+    <!-- ============ 05 RESPONSE ============ -->
     <section class="section-band" id="response" aria-labelledby="response-title">
       <div class="section-layout">
         <div class="section-kicker">05 / Response</div>
         <div class="section-content">
-          <h2 id="response-title">From critique to response</h2>
-          <p class="section-intro">The aim is not cynicism. A stronger literacy habit ends with a constructive move: rewrite the claim more transparently, or ask one public scrutiny question.</p>
+          <h2 id="response-title" class="reveal">From critique to response</h2>
+          <p class="section-intro reveal">The aim is not cynicism. A stronger literacy habit ends with a constructive move: rewrite the claim more transparently, or ask one public scrutiny question.</p>
 
-          <div class="rewrite-lab">
+          <div class="rewrite-lab reveal">
             <div class="rewrite-original">
               <p class="mono-label">Original</p>
-              <blockquote>"100% carbon neutral by 2050"</blockquote>
+              <blockquote>&ldquo;100% carbon neutral by 2050&rdquo;</blockquote>
+              <p class="small-text">Eight words, no boundary, no baseline, no interim date.</p>
             </div>
             <div class="rewrite-controls">
               <fieldset>
@@ -324,42 +265,97 @@
                 <label><input type="checkbox" data-rewrite-part="exclusions" checked> Name what is excluded</label>
                 <label><input type="checkbox" data-rewrite-part="uncertainty" checked> Admit what remains uncertain</label>
               </fieldset>
+              <div class="strength-meter" aria-hidden="true">
+                <span data-meter-seg></span><span data-meter-seg></span><span data-meter-seg></span><span data-meter-seg></span>
+              </div>
+              <p class="strength-label" data-strength-label aria-live="polite"></p>
             </div>
             <div class="rewrite-output" aria-live="polite">
-              <p class="mono-label">Better</p>
+              <p class="mono-label">Rewritten</p>
               <p id="rewrite-output-text"></p>
             </div>
           </div>
-          <p class="scrutiny-question"><strong>Scrutiny question:</strong> What emissions, products, places and time periods are included in this claim, and what is left outside it?</p>
+          <p class="scrutiny-question reveal"><strong>One scrutiny question to keep:</strong> What emissions, products, places and time periods are included in this claim — and what is left outside it?</p>
         </div>
       </div>
     </section>
 
-    <section class="section-band section-tinted" id="educators" aria-labelledby="educators-title">
+    <!-- ============ 06 GLOSSARY ============ -->
+    <section class="section-band section-tinted" id="glossary" aria-labelledby="glossary-title">
       <div class="section-layout">
-        <div class="section-kicker">06 / Educators</div>
+        <div class="section-kicker">06 / Glossary</div>
         <div class="section-content">
-          <h2 id="educators-title">For educators</h2>
-          <p class="section-intro">This resource can support a 60 to 90 minute activity for students, sustainability learners or programme teams. It works best as a guided reading exercise, not a test of personal virtue.</p>
-          <ol class="workshop-list">
+          <h2 id="glossary-title" class="reveal">Small glossary</h2>
+          <p class="section-intro reveal">Eight terms that do a lot of quiet work in sustainability claims. Knowing them makes most claims easier to question.</p>
+          <div class="glossary-grid reveal">
+            <details>
+              <summary>Scope 1, 2 and 3</summary>
+              <p>Three boundaries for counting an organisation's emissions: direct emissions (1), purchased energy (2), and the value chain — suppliers, products in use, investments (3). Scope 3 is usually the largest and the most often excluded. Always ask which scopes a target covers.</p>
+            </details>
+            <details>
+              <summary>Baseline</summary>
+              <p>The reference year a reduction is measured against. &ldquo;50% less&rdquo; means little without one — a conveniently high baseline year can make modest progress look dramatic.</p>
+            </details>
+            <details>
+              <summary>Offset</summary>
+              <p>Paying for emission reductions or removals elsewhere — tree planting, renewable projects, capture — instead of reducing one's own emissions. Quality varies widely, and offsets inside a &ldquo;neutral&rdquo; claim often go unmentioned.</p>
+            </details>
+            <details>
+              <summary>Lifecycle (LCA)</summary>
+              <p>The full journey of a product: raw materials, manufacture, transport, use and disposal. A claim about one stage — say, packaging — may sit inside a lifecycle whose main impact lies elsewhere, such as the use phase.</p>
+            </details>
+            <details>
+              <summary>Carbon neutral vs net zero</summary>
+              <p>Often blurred. &ldquo;Carbon neutral&rdquo; frequently leans on offsets for a narrow boundary; &ldquo;net zero&rdquo; is meant to involve deep reductions first, with removals only for the residue. The words alone do not tell you which is happening.</p>
+            </details>
+            <details>
+              <summary>Absolute vs intensity</summary>
+              <p>An intensity measure (emissions per unit, per litre, per passenger) can fall while total emissions rise, if output grows. &ldquo;Cleaner than ever per product&rdquo; is compatible with a growing footprint.</p>
+            </details>
+            <details>
+              <summary>Rebound effect</summary>
+              <p>When an efficiency gain lowers cost and so increases consumption, eating part of the saving. Efficiency claims rarely mention it.</p>
+            </details>
+            <details>
+              <summary>Climate delay</summary>
+              <p>Discourse that accepts climate change is real while making inadequate action feel reasonable — by redirecting responsibility, pushing non-transformative fixes, stressing the downsides of action, or surrendering (Lamb et al., 2020).</p>
+            </details>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 07 EDUCATORS ============ -->
+    <section class="section-band" id="educators" aria-labelledby="educators-title">
+      <div class="section-layout">
+        <div class="section-kicker">07 / Educators</div>
+        <div class="section-content">
+          <h2 id="educators-title" class="reveal">For educators</h2>
+          <p class="section-intro reveal">This resource can support a 60 to 90 minute activity for students, sustainability learners or programme teams. It works best as a guided reading exercise, not a test of personal virtue.</p>
+          <ol class="workshop-list reveal">
             <li><span>Warm-up trust question</span><p>Ask what makes a public sustainability claim feel trustworthy.</p></li>
             <li><span>Four-question tool</span><p>Introduce claim, evidence, omission and future as a shared vocabulary.</p></li>
             <li><span>Real or regulator-validated case</span><p>Use a careful public example where evidence has already been assessed.</p></li>
             <li><span>Fictional group cards</span><p>Let groups practise without accusing named organisations.</p></li>
             <li><span>Individual reflection</span><p>Invite students to name one question they would ask next time.</p></li>
           </ol>
-          <p class="educator-note">Facilitators should avoid personal disclosure pressure and keep the focus on public communication, not personal guilt. A short session can build useful habits of scrutiny, but it should not be overclaimed as transformation.</p>
+          <div class="educator-actions reveal">
+            <button type="button" class="button button-primary" data-print-worksheet>Print the worksheet</button>
+            <p class="small-text">A one-page A4 worksheet with the four questions, an observation box and the delay-family checklist. Uses your browser's print dialogue — save as PDF if you prefer.</p>
+          </div>
+          <p class="educator-note reveal">Facilitators should avoid personal disclosure pressure and keep the focus on public communication, not personal guilt. A short session can build useful habits of scrutiny, but it should not be overclaimed as transformation.</p>
         </div>
       </div>
     </section>
 
-    <section class="section-band" id="project-note" aria-labelledby="project-title">
+    <!-- ============ 08 PROJECT NOTE ============ -->
+    <section class="section-band section-tinted" id="project-note" aria-labelledby="project-title">
       <div class="section-layout">
-        <div class="section-kicker">07 / Project note</div>
+        <div class="section-kicker">08 / Project note</div>
         <div class="section-content">
-          <h2 id="project-title">Project note</h2>
-          <p class="section-intro">This resource grew out of an MA Education for a Sustainable Environment dissertation project at the University of Manchester exploring critical greenwashing literacy among MA students.</p>
-          <div class="project-card" aria-label="Project contact">
+          <h2 id="project-title" class="reveal">Project note</h2>
+          <p class="section-intro reveal">This resource grew out of an MA Education for a Sustainable Environment dissertation project at the University of Manchester exploring critical greenwashing literacy among MA students.</p>
+          <div class="project-card reveal" aria-label="Project contact">
             <p><strong>Ziheng Deng</strong><br><a href="mailto:ziheng.deng@student.manchester.ac.uk">ziheng.deng@student.manchester.ac.uk</a></p>
             <p>Supervisor: Dr Susan Brown</p>
             <p class="small-text">The original dissertation workshop was time-limited. This website is offered as a public educational resource.</p>
@@ -368,20 +364,21 @@
       </div>
     </section>
 
-    <section class="section-band section-tinted" id="resources" aria-labelledby="resources-title">
+    <!-- ============ 09 RESOURCES ============ -->
+    <section class="section-band" id="resources" aria-labelledby="resources-title">
       <div class="section-layout">
-        <div class="section-kicker">08 / Resources</div>
+        <div class="section-kicker">09 / Resources</div>
         <div class="section-content">
-          <h2 id="resources-title">Resources</h2>
-          <p class="section-intro">Selected starting points for understanding greenwashing, climate delay, media literacy and sustainability education.</p>
+          <h2 id="resources-title" class="reveal">Resources</h2>
+          <p class="section-intro reveal">Selected starting points for understanding greenwashing, climate delay, media literacy and sustainability education.</p>
 
-          <div class="resource-groups">
+          <div class="resource-groups reveal">
             <article class="resource-group">
               <h3>Greenwashing and environmental claims</h3>
               <ul>
-                <li><a href="https://doi.org/10.1525/cmr.2011.54.1.64">Delmas and Burbano (2011), "The Drivers of Greenwashing"</a>. A clear account of organisational incentives behind misleading environmental communication.</li>
-                <li><a href="https://www.mdpi.com/2071-1050/14/8/4431">Nemes et al. (2022), "An Integrated Framework to Assess Greenwashing"</a>. Useful for mapping greenwashing across claims, evidence and organisational context.</li>
-                <li><a href="https://www.gov.uk/government/publications/green-claims-code-making-environmental-claims">Competition and Markets Authority (2021), "Green Claims Code"</a>. Public guidance on truthful, clear and substantiated environmental claims in the UK.</li>
+                <li><a href="https://doi.org/10.1525/cmr.2011.54.1.64">Delmas and Burbano (2011), &ldquo;The Drivers of Greenwashing&rdquo;</a>. A clear account of organisational incentives behind misleading environmental communication.</li>
+                <li><a href="https://www.mdpi.com/2071-1050/14/8/4431">Nemes et al. (2022), &ldquo;An Integrated Framework to Assess Greenwashing&rdquo;</a>. Useful for mapping greenwashing across claims, evidence and organisational context.</li>
+                <li><a href="https://www.gov.uk/government/publications/green-claims-code-making-environmental-claims">Competition and Markets Authority (2021), &ldquo;Green Claims Code&rdquo;</a>. Public guidance on truthful, clear and substantiated environmental claims in the UK.</li>
                 <li>Eng et al. (2021). Reading on greenwashing, consumer trust and sustainability communication. Useful for connecting claim design with audience interpretation.</li>
               </ul>
             </article>
@@ -389,29 +386,29 @@
             <article class="resource-group">
               <h3>Climate delay and fossil-fuel communication</h3>
               <ul>
-                <li><a href="https://doi.org/10.1017/sus.2020.13">Lamb et al. (2020), "Discourses of Climate Delay"</a>. The source for the four delay families used in this resource.</li>
-                <li><a href="https://doi.org/10.1088/1748-9326/aa815f">Supran and Oreskes (2017), "Assessing ExxonMobil's Climate Change Communications"</a>. A method-rich example of comparing corporate records with public-facing messaging.</li>
-                <li><a href="https://doi.org/10.1126/science.abk0063">Supran, Rahmstorf and Oreskes (2023), "Assessing ExxonMobil's Global Warming Projections"</a>. A peer-reviewed example of checking historical projections against later climate observations.</li>
-                <li>Bandura and Cherry (2020), "Enlisting the Power of Youth for Climate Change". Helpful for thinking about agency, efficacy and public engagement.</li>
+                <li><a href="https://doi.org/10.1017/sus.2020.13">Lamb et al. (2020), &ldquo;Discourses of Climate Delay&rdquo;</a>. The source for the four delay families used in this resource.</li>
+                <li><a href="https://doi.org/10.1088/1748-9326/aa815f">Supran and Oreskes (2017), &ldquo;Assessing ExxonMobil's Climate Change Communications&rdquo;</a>. A method-rich example of comparing corporate records with public-facing messaging.</li>
+                <li><a href="https://doi.org/10.1126/science.abk0063">Supran, Rahmstorf and Oreskes (2023), &ldquo;Assessing ExxonMobil's Global Warming Projections&rdquo;</a>. A peer-reviewed example of checking historical projections against later climate observations.</li>
+                <li>Bandura and Cherry (2020), &ldquo;Enlisting the Power of Youth for Climate Change&rdquo;. Helpful for thinking about agency, efficacy and public engagement.</li>
               </ul>
             </article>
 
             <article class="resource-group">
               <h3>Media literacy and misinformation</h3>
               <ul>
-                <li><a href="https://www.aspeninstitute.org/publications/digital-media-literacy-plan-action/">Hobbs (2010), "Digital and Media Literacy: A Plan of Action"</a>. A practical foundation for asking who made a message, for what purpose and with what evidence.</li>
-                <li><a href="https://namle.org/resources/core-principles/">NAMLE (2007), "Core Principles of Media Literacy Education"</a>. A concise statement of inquiry-led media literacy practice.</li>
-                <li><a href="https://doi.org/10.1080/10463283.2021.1876983">Lewandowsky and van der Linden (2021), "Countering Misinformation and Fake News Through Inoculation and Prebunking"</a>. Relevant to teaching people to recognise persuasive techniques before they recur.</li>
+                <li><a href="https://www.aspeninstitute.org/publications/digital-media-literacy-plan-action/">Hobbs (2010), &ldquo;Digital and Media Literacy: A Plan of Action&rdquo;</a>. A practical foundation for asking who made a message, for what purpose and with what evidence.</li>
+                <li><a href="https://namle.org/resources/core-principles/">NAMLE (2007), &ldquo;Core Principles of Media Literacy Education&rdquo;</a>. A concise statement of inquiry-led media literacy practice.</li>
+                <li><a href="https://doi.org/10.1080/10463283.2021.1876983">Lewandowsky and van der Linden (2021), &ldquo;Countering Misinformation and Fake News Through Inoculation and Prebunking&rdquo;</a>. Relevant to teaching people to recognise persuasive techniques before they recur.</li>
               </ul>
             </article>
 
             <article class="resource-group">
               <h3>Transformative learning and sustainability education</h3>
               <ul>
-                <li>Mezirow (2000), "Learning as Transformation". A key text for critical reflection and changing frames of reference.</li>
+                <li>Mezirow (2000), &ldquo;Learning as Transformation&rdquo;. A key text for critical reflection and changing frames of reference.</li>
                 <li>Bryan (2020). Climate change education work on emotion, difficult knowledge and the limits of simple awareness-raising.</li>
-                <li><a href="https://unesdoc.unesco.org/ark:/48223/pf0000247444">UNESCO (2017), "Education for Sustainable Development Goals: Learning Objectives"</a>. A widely used framework for sustainability learning outcomes.</li>
-                <li><a href="https://www.qaa.ac.uk/the-quality-code/education-for-sustainable-development">QAA and Advance HE (2021), "Education for Sustainable Development Guidance"</a>. UK higher education guidance for embedding sustainability in curricula.</li>
+                <li><a href="https://unesdoc.unesco.org/ark:/48223/pf0000247444">UNESCO (2017), &ldquo;Education for Sustainable Development Goals: Learning Objectives&rdquo;</a>. A widely used framework for sustainability learning outcomes.</li>
+                <li><a href="https://www.qaa.ac.uk/the-quality-code/education-for-sustainable-development">QAA and Advance HE (2021), &ldquo;Education for Sustainable Development Guidance&rdquo;</a>. UK higher education guidance for embedding sustainability in curricula.</li>
               </ul>
             </article>
           </div>
@@ -419,12 +416,13 @@
       </div>
     </section>
 
-    <section class="section-band" id="faq" aria-labelledby="faq-title">
+    <!-- ============ 10 FAQ ============ -->
+    <section class="section-band section-tinted" id="faq" aria-labelledby="faq-title">
       <div class="section-layout">
-        <div class="section-kicker">09 / FAQ</div>
+        <div class="section-kicker">10 / FAQ</div>
         <div class="section-content">
-          <h2 id="faq-title">FAQ</h2>
-          <div class="faq-list">
+          <h2 id="faq-title" class="reveal">FAQ</h2>
+          <div class="faq-list reveal">
             <details>
               <summary>Is every sustainability claim greenwashing?</summary>
               <p>No. Many claims are useful, specific and well evidenced. Greenwashing literacy helps readers distinguish stronger claims from vague, selective or overstated ones.</p>
@@ -456,10 +454,37 @@
   </main>
 
   <footer class="site-footer">
-    <p>Greenwashing Literacy is a public-facing educational resource for critical reading of sustainability claims.</p>
+    <p>Greenwashing Literacy is a public-facing educational resource for critical reading of sustainability claims. All practice claims are fictional.</p>
     <a href="#top">Back to top</a>
   </footer>
 
-  <script src="script.js?v=2"></script>
+  <!-- ============ PRINT-ONLY WORKSHEET ============ -->
+  <section class="worksheet" aria-hidden="true">
+    <header class="ws-head">
+      <h1>Greenwashing Literacy — claim worksheet</h1>
+      <p>greenwashingliteracy.com · one claim, four questions</p>
+    </header>
+    <div class="ws-claimbox">
+      <p class="ws-label">The claim (copy the exact wording, and where you saw it)</p>
+    </div>
+    <ol class="ws-questions">
+      <li><strong>What is claimed?</strong> Separate measurable statements from mood words.</li>
+      <li><strong>What evidence is offered?</strong> Data, dates, baselines, verification — or imagery and tone?</li>
+      <li><strong>What is omitted?</strong> What information would change how this claim is understood?</li>
+      <li><strong>What future is normalised?</strong> What does this message make feel sensible or inevitable?</li>
+    </ol>
+    <div class="ws-delay">
+      <p class="ws-label">Possible climate-delay family (tick any that fit)</p>
+      <p>☐ Redirect responsibility&emsp;☐ Non-transformative solutions&emsp;☐ Emphasise downsides of action&emsp;☐ Surrender</p>
+    </div>
+    <div class="ws-rewrite">
+      <p class="ws-label">Rewrite the claim more transparently, or write one public scrutiny question</p>
+    </div>
+    <footer class="ws-foot">
+      <p>From an MA Education for a Sustainable Environment dissertation project, University of Manchester. Practice claims should be fictional unless a case is regulator-validated.</p>
+    </footer>
+  </section>
+
+  <script src="script.js?v=3"></script>
 </body>
 </html>

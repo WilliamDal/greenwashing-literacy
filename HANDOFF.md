@@ -29,6 +29,30 @@ claims more critically.
   intentionally added
 - Keep British English spelling
 
+### Where the interactive content lives (since v3)
+
+All practice content is data, not markup. Edit these objects at the top of
+`script.js`:
+
+- `LAB_CASES` — the three claim-lab cards. Each lens has three options with a
+  `verdict` of `strongest`, `partial` or `weak` plus feedback text. Options are
+  shuffled on render. When all four lenses are answered, a summary with the
+  possible delay family appears.
+- `QUIZ_ITEMS` / `QUIZ_FAMILIES` — the six-statement "Spot the family" quiz in
+  the climate-delay section, with first-try scoring.
+- The rewrite lab sentences live in `initialiseRewriteLab` (`parts` object),
+  with a four-segment strength meter.
+
+Other systems in `script.js`: hero specimen lens chips (highlight `.spec-part`
+spans in `index.html`), scroll-reveal via IntersectionObserver (`.reveal`
+class), nav section highlighting, and the print worksheet
+(`data-print-worksheet` button adds `print-worksheet` to `<body>` and calls
+`window.print()`; the worksheet markup is the `.worksheet` section at the end
+of `index.html`, print CSS at the end of `styles.css`).
+
+Cache-busting: bump `?v=N` on the CSS/JS links in `index.html` whenever either
+file changes.
+
 The site should continue to work by opening `index.html` directly, although
 using a tiny local server is better for testing.
 
@@ -126,17 +150,22 @@ Contact details:
 
 ## Future Improvement Backlog
 
+Done in v3 (June 2026): user-selected claim-lab observations, delay-family
+quiz, rewrite lab with strength meter, glossary, printable educator worksheet,
+JSON-LD metadata, scroll-reveal and nav highlighting.
+
 High-value next steps:
 
-- Add a stronger interactive claim-lab workflow with user-selected observations.
-- Add a claim rewrite practice area that produces a transparent rewritten claim.
-- Improve mobile density and section rhythm.
-- Add a printable educator worksheet.
-- Add regulator-validated case examples with careful wording.
-- Add a small glossary for terms such as scope, baseline, offset, lifecycle and
-  climate delay.
-- Add structured metadata for search previews.
+- Add regulator-validated case examples with careful wording (CMA/ASA cases).
+- Consider a downloadable PDF version of the educator worksheet.
+- Add an OG share image (simple specimen-card graphic, no stock photos).
+- Read the dissertation (not yet in this folder — ask William to drop it in)
+  and align terminology and examples with it more closely.
 - Check HTTPS status in GitHub Pages after DNS propagation.
+
+Verification note: the Chrome extension cannot open `file://` URLs, so verify
+changes on the live site after pushing, at desktop and ~390px widths, and check
+the console for errors.
 
 ## Future Codex Session Prompt
 
