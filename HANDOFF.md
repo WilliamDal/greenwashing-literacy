@@ -62,12 +62,15 @@ file changes.
   no supervisor, no university email. Origin is described as "grew out of
   postgraduate education research at the University of Manchester".
 - Public contact: william@greenwashingliteracy.com (domain email).
-- Logo: "peeled green layer" — a sage square with the top-right corner folded
-  back in dark purple, meaning a green surface lifted for inspection. Flat and
-  geometric on purpose; William rejected an earlier cartoon-style magnifier.
-  It lives in two places in `index.html`: the inline `<svg class="brand-logo">`
-  in the header and the URL-encoded favicon data URI in `<head>`. Edit both
-  together.
+- Logo: **"the four-lens grid"** — three dark-purple outlined squares (the
+  questions) and one sage-green filled square rotated 8° (the green claim that
+  doesn't sit straight). Chosen by William after three rounds; earlier rejected
+  marks: cartoon magnifier ("too cartoonish"), peeled-corner square ("file-icon
+  cliché"). Design rules learned: marks must come from the method itself, look
+  like ink on paper (editorial, not app-icon), two inks max, drawn as paths
+  (no font dependence). It lives in two places in `index.html`: the inline
+  `<svg class="brand-logo">` in the header and the URL-encoded favicon data
+  URI in `<head>`. Edit both together.
 - Never fabricate testimonials, partner logos, user statistics or charity
   status to look more institutional. Credibility comes from definitions,
   method and sourcing.
