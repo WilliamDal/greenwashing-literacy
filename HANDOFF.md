@@ -53,6 +53,11 @@ of `index.html`, print CSS at the end of `styles.css`).
 Cache-busting: bump `?v=N` on the CSS/JS links in `index.html` whenever either
 file changes.
 
+Logo (June 2026): a magnifier inspecting a claim card with a tick — chosen by
+William from three options. It lives in two places in `index.html`: an inline
+`<svg class="brand-logo">` in the header, and the URL-encoded favicon data URI
+in `<head>`. Edit both together if it ever changes.
+
 The site should continue to work by opening `index.html` directly, although
 using a tiny local server is better for testing.
 
