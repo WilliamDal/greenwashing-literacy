@@ -53,10 +53,24 @@ of `index.html`, print CSS at the end of `styles.css`).
 Cache-busting: bump `?v=N` on the CSS/JS links in `index.html` whenever either
 file changes.
 
-Logo (June 2026): a magnifier inspecting a claim card with a tick — chosen by
-William from three options. It lives in two places in `index.html`: an inline
-`<svg class="brand-logo">` in the header, and the URL-encoded favicon data URI
-in `<head>`. Edit both together if it ever changes.
+### Brand identity (June 2026 rebrand)
+
+- Name: **The Greenwashing Literacy Project** — positioned as an independent
+  educational initiative (reference point: The Carbon Literacy Project), NOT a
+  personal/student site. Keep the institutional voice ("the project ...").
+- Personal info policy, set by William: only "Founded by Ziheng Deng" appears;
+  no supervisor, no university email. Origin is described as "grew out of
+  postgraduate education research at the University of Manchester".
+- Public contact: william@greenwashingliteracy.com (domain email).
+- Logo: "peeled green layer" — a sage square with the top-right corner folded
+  back in dark purple, meaning a green surface lifted for inspection. Flat and
+  geometric on purpose; William rejected an earlier cartoon-style magnifier.
+  It lives in two places in `index.html`: the inline `<svg class="brand-logo">`
+  in the header and the URL-encoded favicon data URI in `<head>`. Edit both
+  together.
+- Never fabricate testimonials, partner logos, user statistics or charity
+  status to look more institutional. Credibility comes from definitions,
+  method and sourcing.
 
 The site should continue to work by opening `index.html` directly, although
 using a tiny local server is better for testing.
