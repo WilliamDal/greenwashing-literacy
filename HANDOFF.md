@@ -188,6 +188,25 @@ Verification note: the Chrome extension cannot open `file://` URLs, so verify
 changes on the live site after pushing, at desktop and ~390px widths, and check
 the console for errors.
 
+## How This Site Works (plain-language, for William)
+
+- **Squarespace** is only the domain registrar: it owns the "address"
+  greenwashingliteracy.com and points it at GitHub's servers (DNS). The site
+  is never edited there. The only thing to do on Squarespace is renew the
+  domain each year.
+- **The GitHub repo** (WilliamDal/greenwashing-literacy) is the website
+  itself: `index.html` + `styles.css` + `script.js` are the whole site.
+  Changing the site = changing these files and committing.
+- **GitHub Pages** turns the repo into the public website automatically,
+  about a minute after each commit to `main`.
+- **HTTPS**: fixed June 2026. The TLS certificate stalled for ~11h after
+  first setup; removing and re-adding the custom domain in repo Settings →
+  Pages re-triggered issuance. "Enforce HTTPS" is now ON, so http requests
+  redirect to https. If a browser tab still shows "Not Secure" with a valid
+  certificate, it is a stale tab loaded before the cert existed — reload it.
+- DNS at Squarespace is correct (apex A records → GitHub Pages IPs, www CNAME
+  → williamdal.github.io). Do not change it.
+
 ## Git State Note (June 2026 session)
 
 The Cowork sandbox has no GitHub credentials, so publishing happens by
