@@ -179,8 +179,11 @@ JSON-LD metadata, scroll-reveal and nav highlighting.
 High-value next steps:
 
 - Consider a downloadable PDF version of the educator worksheet.
-- Add an OG share image (simple specimen-card graphic, no stock photos).
-- Check HTTPS status in GitHub Pages after DNS propagation.
+
+Done June 2026: og-image.png (generated with PIL from the logo geometry —
+regenerate if the logo changes), branded 404.html, robots.txt + sitemap.xml
+(bump `lastmod` on meaningful content changes), README rewritten for the
+project brand, HTTPS enforced and verified.
 
 Done since: ASA Shell UK ruling (June 2023, upheld in part) added to Resources
 as the regulator-validated case; de Freitas Netto et al. (2020) added.
