@@ -1166,7 +1166,7 @@ blockquote {
 .workshop-list li {
   display: grid;
   grid-template-columns: 72px minmax(0, 1fr);
-  gap: 18px;
+  gap: 2px 18px;
   padding: 20px 0;
   border-bottom: 1px solid var(--line);
   counter-increment: workshop;
@@ -1186,6 +1186,7 @@ blockquote {
 }
 
 .workshop-list p {
+  grid-column: 2;
   margin: 4px 0 0;
   color: var(--muted);
 }

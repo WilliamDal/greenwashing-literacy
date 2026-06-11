@@ -156,16 +156,47 @@ JSON-LD metadata, scroll-reveal and nav highlighting.
 
 High-value next steps:
 
-- Add regulator-validated case examples with careful wording (CMA/ASA cases).
 - Consider a downloadable PDF version of the educator worksheet.
 - Add an OG share image (simple specimen-card graphic, no stock photos).
-- Read the dissertation (not yet in this folder — ask William to drop it in)
-  and align terminology and examples with it more closely.
 - Check HTTPS status in GitHub Pages after DNS propagation.
+
+Done since: ASA Shell UK ruling (June 2023, upheld in part) added to Resources
+as the regulator-validated case; de Freitas Netto et al. (2020) added.
+
+## Dissertation Alignment Notes
+
+The dissertation lives in the separately mounted folder
+`/Users/william/Desktop/邓紫恒/MA Courses/Dissertation` (read-only — never edit
+it from this project). Key alignment facts, from Ch1–2 (June 2026 drafts):
+
+- Three anchors: M = critical media literacy (Hobbs 2010; Eng et al. 2021),
+  D = climate-delay discourses (Lamb et al. 2020), T = transformative learning
+  and affective pedagogy (Mezirow; Bryan 2020; Ojala 2016).
+- The dissertation calls the tool the "four-prompt tool"; the site uses
+  "four-question tool" deliberately as plainer public language. Same four
+  prompts: what is claimed / what evidence / what is omitted / what future is
+  normalised.
+- Workshop arc: four prompts → name the delay family → rewrite or public
+  scrutiny question (a small efficacy experience, after Bandura). The site's
+  Claim Lab → quiz → rewrite lab mirrors this arc.
+- Teaching case: ASA Shell UK ruling (2023) is the regulator-validated case;
+  scored task uses fictional scenarios — matching the site's fictional cards.
+- Tone rule from the dissertation: avoid cynicism; end constructively; treat
+  emotion as data, not noise; no consumer shaming.
 
 Verification note: the Chrome extension cannot open `file://` URLs, so verify
 changes on the live site after pushing, at desktop and ~390px widths, and check
 the console for errors.
+
+## Git State Note (June 2026 session)
+
+The Cowork sandbox has no GitHub credentials, so publishing happens by
+uploading changed files through the GitHub web UI (with William's confirmation
+for each commit). After each web commit, re-sync the local repo to origin
+(`git fetch && git reset --hard origin/main`) — this can be run on William's
+Mac via the Control-your-Mac osascript tool if the sandbox cannot write to
+`.git`. Always sync local AFTER the remote has the final state, never before
+uncommitted local work has been uploaded.
 
 ## Future Codex Session Prompt
 
