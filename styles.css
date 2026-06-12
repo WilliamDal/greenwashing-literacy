@@ -1273,14 +1273,18 @@ blockquote {
 
 .educator-actions {
   display: grid;
-  grid-template-columns: auto minmax(0, 1fr);
-  gap: 18px;
-  align-items: center;
+  gap: 14px;
   max-width: 760px;
   margin-bottom: 26px;
   padding: 20px;
   border: 1px solid var(--line-strong);
   background: var(--surface);
+}
+
+.educator-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .educator-actions .small-text {

@@ -176,14 +176,17 @@ Done in v3 (June 2026): user-selected claim-lab observations, delay-family
 quiz, rewrite lab with strength meter, glossary, printable educator worksheet,
 JSON-LD metadata, scroll-reveal and nav highlighting.
 
-High-value next steps:
+High-value next steps: none pending — backlog is clear as of June 2026.
+Ideas for later sessions: regulator-validated case walkthrough as a guided
+interactive, more claim-lab cards, translated worksheet versions.
 
-- Consider a downloadable PDF version of the educator worksheet.
-
-Done June 2026: og-image.png (generated with PIL from the logo geometry —
-regenerate if the logo changes), branded 404.html, robots.txt + sitemap.xml
-(bump `lastmod` on meaningful content changes), README rewritten for the
-project brand, HTTPS enforced and verified.
+Done June 2026: og-image.png and apple-touch-icon.png (both generated with
+PIL from the logo geometry — regenerate if the logo changes), worksheet.pdf
+(generated with reportlab; regenerate via script if worksheet content
+changes — keep it matching the print `.worksheet` section), branded
+404.html, robots.txt + sitemap.xml (bump `lastmod` on meaningful content
+changes), README rewritten for the project brand, HTTPS enforced and
+verified.
 
 Done since: ASA Shell UK ruling (June 2023, upheld in part) added to Resources
 as the regulator-validated case; de Freitas Netto et al. (2020) added.
