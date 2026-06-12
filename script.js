@@ -290,6 +290,294 @@ const LAB_CASES = [
         ]
       }
     ]
+  },
+  {
+    id: "offset",
+    tabTitle: "Card D",
+    tabSub: "Offset claim",
+    label: "Card D / Offset-based neutrality claim",
+    name: "Swiftmoor Airways",
+    quote: "“Fly carbon neutral today — every flight's emissions fully offset.”",
+    note: "Offset projects not named. Flying continues as before.",
+    summary: "“Neutral” here is an accounting claim, not a reduction: emissions continue, and unnamed offsets absorb them on paper. <strong>Possible delay family: push non-transformative solutions</strong> — offsetting lets the underlying activity carry on unchanged. Compare the glossary entries on offsets and carbon neutral vs net zero.",
+    lenses: [
+      {
+        title: "01 · What is claimed?",
+        prompt: "Which reading best captures the central claim?",
+        options: [
+          {
+            text: "Buying this flight today has no net climate impact at all.",
+            verdict: "strongest",
+            feedback: "“Carbon neutral” plus “fully offset” invites you to treat the flight as climate-free — and the whole weight of that promise rests on offsets the message never names."
+          },
+          {
+            text: "The airline purchases offsets equal to its flights' emissions.",
+            verdict: "partial",
+            feedback: "That is the mechanism implied — but the headline claims the outcome, neutrality, which is a much stronger statement than the mechanism."
+          },
+          {
+            text: "The airline's aircraft produce no emissions.",
+            verdict: "weak",
+            feedback: "Nothing here says the planes are different. Neutrality claims are usually about accounting, not engineering."
+          }
+        ]
+      },
+      {
+        title: "02 · What evidence is offered?",
+        prompt: "What substantiation does the communication actually provide?",
+        options: [
+          {
+            text: "None that can be checked — no named projects, no standard, no registry, no share of emissions actually covered.",
+            verdict: "strongest",
+            feedback: "Right. For offset claims, substantiation means verifiable projects and methods. “Fully offset” without them cannot be assessed at all."
+          },
+          {
+            text: "The word “fully” implies a calculation has been done somewhere.",
+            verdict: "partial",
+            feedback: "It does imply one — but an implied calculation with no method, boundary or auditor is exactly what the evidence lens should catch."
+          },
+          {
+            text: "The word “today” suggests the scheme is already up and running.",
+            verdict: "weak",
+            feedback: "Timing words add reassurance, not evidence. When a scheme started says nothing about whether it works."
+          }
+        ]
+      },
+      {
+        title: "03 · What is omitted?",
+        prompt: "Which omission would most change how the claim is understood?",
+        options: [
+          {
+            text: "Offset quality and permanence — whether the projects are verified, additional, and durable enough to match long-lived flight emissions.",
+            verdict: "strongest",
+            feedback: "This is the decisive omission. Offsets vary enormously in quality, and a flight's carbon can outlast the trees planted against it."
+          },
+          {
+            text: "The price of the offset built into each ticket.",
+            verdict: "partial",
+            feedback: "A strikingly low figure would be telling — but even an expensive offset can be a weak one. Quality matters more than cost."
+          },
+          {
+            text: "The airline's on-time performance record.",
+            verdict: "weak",
+            feedback: "Unrelated to the environmental claim. Keep the omission lens on information that changes the claim's meaning."
+          }
+        ]
+      },
+      {
+        title: "04 · What future is normalised?",
+        prompt: "What does this message quietly make feel normal?",
+        options: [
+          {
+            text: "A future where flying as much as ever feels settled, because someone else's project absorbs the consequences.",
+            verdict: "strongest",
+            feedback: "Yes — the claim removes the question of demand entirely. Neutrality language can make continued growth feel already solved."
+          },
+          {
+            text: "A future with more money flowing into environmental projects.",
+            verdict: "partial",
+            feedback: "Possibly — but the claim shows nothing about where the money goes, so this future is hoped for rather than evidenced."
+          },
+          {
+            text: "A future of zero-emission aircraft technology.",
+            verdict: "weak",
+            feedback: "Technology is never mentioned. Offsetting is precisely a way of not changing the aircraft."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    id: "social",
+    tabTitle: "Card E",
+    tabSub: "Social post",
+    label: "Card E / Sponsored social-media post",
+    name: "Lindenfold",
+    quote: "“Obsessed with my new conscious capsule from Lindenfold 🌿 #EarthFriendly #ad”",
+    note: "Forest backdrop, linen tones, soft light. One small “#ad”.",
+    summary: "Almost all the environmental meaning here is carried by atmosphere — forest, linen, the word “conscious” — rather than by any checkable statement. Researchers call these executional cues. <strong>Possible delay family: redirect responsibility</strong> — sustainability becomes a feeling you buy rather than a system you question.",
+    lenses: [
+      {
+        title: "01 · What is claimed?",
+        prompt: "Which reading best captures the central claim?",
+        options: [
+          {
+            text: "Nothing checkable is claimed at all — the impression of sustainability is built entirely from mood words and imagery.",
+            verdict: "strongest",
+            feedback: "Exactly. “Conscious” and a leaf do the work a claim would normally have to do. There is no statement here that could even be false."
+          },
+          {
+            text: "The capsule collection is made more sustainably than other clothing.",
+            verdict: "partial",
+            feedback: "That is the impression a reader takes away — but notice the post never actually says it. Impressions are harder to hold to account than claims."
+          },
+          {
+            text: "The clothes are made of natural linen.",
+            verdict: "weak",
+            feedback: "The linen tones are a styling choice in the imagery. The post says nothing about materials."
+          }
+        ]
+      },
+      {
+        title: "02 · What evidence is offered?",
+        prompt: "What substantiation does the communication actually provide?",
+        options: [
+          {
+            text: "Only atmosphere — scenery, styling and one warm word, with no materials, supply-chain or certification information.",
+            verdict: "strongest",
+            feedback: "Right. This is greenwashing by execution rather than assertion: the cues imply virtue while nothing is offered to check."
+          },
+          {
+            text: "The “#ad” tag shows the post follows disclosure rules.",
+            verdict: "partial",
+            feedback: "Disclosing payment is not evidence about the product. A post can be properly labelled and still environmentally empty."
+          },
+          {
+            text: "The influencer's personal enthusiasm.",
+            verdict: "weak",
+            feedback: "Enthusiasm is the product being sold. It tells you about the endorsement deal, not the clothes."
+          }
+        ]
+      },
+      {
+        title: "03 · What is omitted?",
+        prompt: "Which omission would most change how the claim is understood?",
+        options: [
+          {
+            text: "Everything material: fibres, volumes, working conditions — and how many of these collections appear each year.",
+            verdict: "strongest",
+            feedback: "Yes — for fast fashion the decisive fact is throughput. A “conscious” line inside a high-volume model changes very little."
+          },
+          {
+            text: "How much the influencer was paid for the post.",
+            verdict: "partial",
+            feedback: "Worth knowing for trust — but an unpaid post could carry the same empty cues. The deeper omission is the product information."
+          },
+          {
+            text: "Which forest the photographs were taken in.",
+            verdict: "weak",
+            feedback: "The forest is set dressing. Its location would tell you nothing about the clothing."
+          }
+        ]
+      },
+      {
+        title: "04 · What future is normalised?",
+        prompt: "What does this message quietly make feel normal?",
+        options: [
+          {
+            text: "A future where feeling green while shopping replaces knowing anything about what was bought.",
+            verdict: "strongest",
+            feedback: "Yes — executional cues train readers to accept atmosphere as information. That habit, at scale, is what keeps vague claims profitable."
+          },
+          {
+            text: "A future with more sustainable collections on offer.",
+            verdict: "partial",
+            feedback: "Maybe — but nothing in the post shows this collection is one. The future on display is aesthetic, not material."
+          },
+          {
+            text: "A future without paid influencer marketing.",
+            verdict: "weak",
+            feedback: "Nothing points there. The format is not the problem; the missing substance is."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    id: "pledge",
+    tabTitle: "Card F",
+    tabSub: "Institution",
+    label: "Card F / Institutional sustainability pledge",
+    name: "Almsworth University",
+    quote: "“Almsworth is committed to a sustainable future for every generation.”",
+    note: "Strategy page banner. No targets or dates given.",
+    summary: "A values statement is standing where a plan should be: no baseline, no target, no date, no owner. <strong>Possible delay family: redirect responsibility</strong> — “every generation” quietly spreads the obligation to everyone, which is another way of assigning it to no one.",
+    lenses: [
+      {
+        title: "01 · What is claimed?",
+        prompt: "Which reading best captures the central claim?",
+        options: [
+          {
+            text: "The institution asks to be seen as committed, without binding itself to anything that could be checked.",
+            verdict: "strongest",
+            feedback: "“Committed” is a posture, not a plan. The sentence stays true whatever the university does next — which is what makes it so safe to publish."
+          },
+          {
+            text: "The university will weigh sustainability in its future decisions.",
+            verdict: "partial",
+            feedback: "That is the generous reading — but no decision area, standard or date is named, so the promise cannot fail."
+          },
+          {
+            text: "The university has already cut its emissions.",
+            verdict: "weak",
+            feedback: "No past achievement is claimed. Vague pledges often borrow the glow of progress without reporting any."
+          }
+        ]
+      },
+      {
+        title: "02 · What evidence is offered?",
+        prompt: "What substantiation does the communication actually provide?",
+        options: [
+          {
+            text: "None — no baseline, no emissions data, no target year, no report to consult.",
+            verdict: "strongest",
+            feedback: "Right. For an institution, substantiation looks like published figures and dated targets. A banner sentence offers none of them."
+          },
+          {
+            text: "The word “committed” suggests a formal decision was taken somewhere.",
+            verdict: "partial",
+            feedback: "Perhaps a committee did meet — but an internal decision the public cannot see is not public evidence."
+          },
+          {
+            text: "The professional design of the strategy page.",
+            verdict: "weak",
+            feedback: "Polish is production value. It shows investment in communication, not in change."
+          }
+        ]
+      },
+      {
+        title: "03 · What is omitted?",
+        prompt: "Which omission would most change how the claim is understood?",
+        options: [
+          {
+            text: "What the commitment covers — campus energy, investments, travel, partnerships — and who is accountable for it.",
+            verdict: "strongest",
+            feedback: "These are the omissions that matter: an institution's footprint hides in its operations and investments, and accountability needs a named owner."
+          },
+          {
+            text: "The university's position in sustainability league tables.",
+            verdict: "partial",
+            feedback: "League tables are one external signal, but they measure many things. The sharper question is what this pledge itself binds."
+          },
+          {
+            text: "The vice-chancellor's personal views on climate change.",
+            verdict: "weak",
+            feedback: "Individual opinion is not institutional commitment. The lens belongs on structures, not personalities."
+          }
+        ]
+      },
+      {
+        title: "04 · What future is normalised?",
+        prompt: "What does this message quietly make feel normal?",
+        options: [
+          {
+            text: "A future where sounding committed is the institutional finish line, and a duty shared by every generation is owned by no office at all.",
+            verdict: "strongest",
+            feedback: "Yes — diffusing responsibility across everyone is the institutional version of redirecting it. A duty held by all is owned by none."
+          },
+          {
+            text: "A future in which the university gradually becomes more sustainable.",
+            verdict: "partial",
+            feedback: "The sentence gestures there — but with no mechanism, the gesture is the whole content."
+          },
+          {
+            text: "A future where students run the university's sustainability strategy.",
+            verdict: "weak",
+            feedback: "“Every generation” is rhetorical inclusion, not a governance proposal."
+          }
+        ]
+      }
+    ]
   }
 ];
 

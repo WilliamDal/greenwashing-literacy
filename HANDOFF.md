@@ -34,10 +34,15 @@ claims more critically.
 All practice content is data, not markup. Edit these objects at the top of
 `script.js`:
 
-- `LAB_CASES` — the three claim-lab cards. Each lens has three options with a
-  `verdict` of `strongest`, `partial` or `weak` plus feedback text. Options are
-  shuffled on render. When all four lenses are answered, a summary with the
-  possible delay family appears.
+- `LAB_CASES` — the six claim-lab cards (A product / B transition / C energy
+  security / D offset-based neutrality / E social-media executional cues /
+  F institutional pledge; fictional brands Swiftmoor Airways, Lindenfold and
+  Almsworth University were name-checked against real brands in June 2026).
+  Each lens has three options with a `verdict` of `strongest`, `partial` or
+  `weak` plus feedback text. Options are shuffled on render. When all four
+  lenses are answered, a summary with the possible delay family appears.
+  Desktop tabs sit in a 3×2 grid (`.lab-tab:nth-child` border rules);
+  mobile stacks them.
 - `QUIZ_ITEMS` / `QUIZ_FAMILIES` — the six-statement "Spot the family" quiz in
   the climate-delay section, with first-try scoring.
 - The rewrite lab sentences live in `initialiseRewriteLab` (`parts` object),

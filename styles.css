@@ -911,8 +911,12 @@ html.no-js .reveal {
   background: rgba(75, 36, 95, 0.06);
 }
 
-.lab-tab:last-child {
+.lab-tab:nth-child(3n) {
   border-right: 0;
+}
+
+.lab-tab:nth-child(-n+3) {
+  border-bottom: 1px solid var(--line-strong);
 }
 
 .lab-tab span {
@@ -1614,7 +1618,9 @@ details p {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .lab-tab {
+  .lab-tab,
+  .lab-tab:nth-child(3n),
+  .lab-tab:nth-child(-n+3) {
     border-right: 0;
     border-bottom: 1px solid var(--line-strong);
   }
