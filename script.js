@@ -812,11 +812,16 @@ function buildLensBlock(labCase, lens, lensIndex, onAnswered) {
     const button = document.createElement("button");
     button.type = "button";
     button.className = "lens-option";
+    button.setAttribute("aria-pressed", "false");
     button.innerHTML = '<span class="marker" aria-hidden="true">✓</span><span>' + escapeHtml(option.text) + "</span>";
 
     button.addEventListener("click", () => {
-      optionsWrap.querySelectorAll(".lens-option").forEach((b) => b.classList.remove("is-chosen"));
+      optionsWrap.querySelectorAll(".lens-option").forEach((b) => {
+        b.classList.remove("is-chosen");
+        b.setAttribute("aria-pressed", "false");
+      });
       button.classList.add("is-chosen");
+      button.setAttribute("aria-pressed", "true");
 
       verdictTag.hidden = false;
       verdictTag.className = "lens-verdict v-" + option.verdict;
@@ -860,6 +865,15 @@ function initialiseDelayQuiz() {
 
   if (!host) {
     return;
+  }
+
+  renderDelayQuiz(host, scoreEl);
+}
+
+function renderDelayQuiz(host, scoreEl) {
+  host.innerHTML = "";
+  if (scoreEl) {
+    scoreEl.textContent = "";
   }
 
   let firstTryCorrect = 0;
@@ -917,6 +931,10 @@ function initialiseDelayQuiz() {
         if (scoreEl) {
           scoreEl.textContent = firstTryCorrect + " / " + answeredCount + " first try";
         }
+
+        if (answeredCount === QUIZ_ITEMS.length) {
+          host.appendChild(buildQuizComplete(firstTryCorrect, () => renderDelayQuiz(host, scoreEl)));
+        }
       });
 
       options.appendChild(button);
@@ -932,6 +950,35 @@ function initialiseDelayQuiz() {
     const family = QUIZ_FAMILIES.find((f) => f.id === id);
     return family ? family.label : id;
   }
+}
+
+function buildQuizComplete(firstTryCorrect, onReset) {
+  const wrap = document.createElement("div");
+  wrap.className = "quiz-complete";
+
+  let verdict;
+  if (firstTryCorrect === QUIZ_ITEMS.length) {
+    verdict = "All " + QUIZ_ITEMS.length + " on the first try — a very sharp eye.";
+  } else if (firstTryCorrect >= 4) {
+    verdict = firstTryCorrect + " of " + QUIZ_ITEMS.length + " on the first try — the families are becoming visible.";
+  } else if (firstTryCorrect >= 2) {
+    verdict = firstTryCorrect + " of " + QUIZ_ITEMS.length + " on the first try — a solid start. These framings are designed to sound reasonable.";
+  } else {
+    verdict = firstTryCorrect + " of " + QUIZ_ITEMS.length + " on the first try. Tricky, aren't they? That slipperiness is exactly the point.";
+  }
+
+  const message = document.createElement("p");
+  message.innerHTML = escapeHtml(verdict) + ' Ready for full claims? <a href="#claim-lab">Open the claim lab</a>.';
+
+  const reset = document.createElement("button");
+  reset.type = "button";
+  reset.className = "button button-secondary quiz-reset";
+  reset.textContent = "Reset and try again";
+  reset.addEventListener("click", onReset);
+
+  wrap.appendChild(message);
+  wrap.appendChild(reset);
+  return wrap;
 }
 
 /* ============ Rewrite lab ============ */

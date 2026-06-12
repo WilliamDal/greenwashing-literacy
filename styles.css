@@ -834,8 +834,19 @@ html.no-js .reveal {
   border-left-color: var(--rust);
 }
 
+.quiz-complete {
+  padding: 20px 24px 22px;
+  border-top: 1px solid var(--line-strong);
+  background: var(--surface-cool);
+}
+
+.quiz-complete p {
+  margin: 0 0 14px;
+  color: var(--sage-ink);
+}
+
 .quiz-reset {
-  margin: 18px 24px 22px;
+  margin: 0;
 }
 
 /* ============ Tool board ============ */
